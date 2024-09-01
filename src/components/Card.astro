@@ -1,0 +1,48 @@
+---
+const { glowingBorder } = Astro.props;
+import "../styles/global.css";
+---
+
+<!-- https://ibelick.com/blog/create-animated-gradient-borders-with-css -->
+<style>
+  .card {
+    width: w-full;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+  }
+
+  .glowingBorder {
+    background:
+      linear-gradient(#222, #222) padding-box,
+      linear-gradient(var(--angle), #959595, #2a6041) border-box;
+    animation: 4s rotate linear infinite;
+  }
+
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+</style>
+
+<div
+  class:list={[
+    "card",
+    "w-full",
+    "max-w-md",
+    glowingBorder ? "glowingBorder" : "",
+  ]}
+>
+  <slot />
+</div>

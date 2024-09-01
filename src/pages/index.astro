@@ -1,16 +1,50 @@
 ---
-
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <Header />
+  </head>
+  <body
+    class="flex flex-col justify-center items-center min-h-screen p-6 md:p-10"
+  >
+    <Card glowingBorder="true">
+      <h1 class="text-xl md:text-2xl font-normal mb-4">Jason Hwang</h1>
+      <h2 class="text-lg md:text-xl font-normal mb-4">
+        Building honest software
+      </h2>
+      <ul class="list-none mt-12">
+        <li class="mb-2">
+          <a href="https://github.com/dotjasonhwang">
+            <img
+              src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"
+              alt="GitHub"
+            />
+          </a>
+        </li>
+        <li class="mb-2">
+          <a href="https://linkedin.com/in/dotjasonhwang">
+            <img
+              src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+              alt="LinkedIn"
+            />
+          </a>
+        </li>
+        <li class="">
+          <a href=" https: instagram.com dotjasonhwang">
+            <img
+              src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+              alt="Instagram"
+            />
+          </a>
+        </li>
+      </ul>
+    </Card><Card>
+      <Footer />
+    </Card>
+  </body>
 </html>
