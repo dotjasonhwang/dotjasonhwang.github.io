@@ -13,14 +13,14 @@ import "../styles/global.css";
     align-items: left;
     padding: 20px;
     border: 2px solid transparent;
-    border-radius: 12px;
+    border-radius: 16px;
   }
 
   .glowingBorder {
     background:
       linear-gradient(#222, #222) padding-box,
-      linear-gradient(var(--angle), #959595, #2a6041) border-box;
-    animation: 4s rotate linear infinite;
+      linear-gradient(var(--angle), #4cea7f, #222, #222) border-box;
+    animation: 6s rotate linear infinite;
   }
 
   @keyframes rotate {
@@ -33,6 +33,16 @@ import "../styles/global.css";
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 </style>
 
