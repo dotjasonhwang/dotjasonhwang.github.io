@@ -1,11 +1,29 @@
+---
+import { AstroSeo } from "@astrolib/seo";
+---
+
 <meta charset="utf-8" />
+<!-- Unsure if this is necessary -->
 <meta name="viewport" content="width=device-width" />
-<meta name="generator" content={Astro.generator} />
 
-<!-- Standard favicon for most browsers -->
-<link rel="icon" href="/turtle.ico" type="image/x-icon" />
-
-<!-- Apple Touch Icon (for iOS devices and Safari on macOS) -->
-<link rel="apple-touch-icon" href="/turtle.png" />
-
-<title>dotjasonhwang</title>
+<AstroSeo
+  title="dotjasonhwang"
+  description="Jason Hwang - Software Engineer"
+  canonical="https://dotjasonhwang.com/"
+  openGraph={{
+    url: "https://dotjasonhwang.com",
+    title: "dotjasonhwang",
+    description: "Jason Hwang - Software Engineer",
+    site_name: "dotjasonhwang",
+  }}
+  additionalLinkTags={[
+    {
+      rel: "icon",
+      href: "/turtle.ico",
+    },
+    {
+      rel: "apple-touch-icon",
+      href: "/turtle.png",
+    },
+  ]}
+/>
