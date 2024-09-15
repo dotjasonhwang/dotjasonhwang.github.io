@@ -10,16 +10,23 @@ import "../styles/global.css";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
-    padding: 20px;
+    align-items: center;
+    padding: 1.5rem;
     border: 2px solid transparent;
-    border-radius: 16px;
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    /* equivalent to lg */
+    .card {
+      padding: 3rem;
+    }
   }
 
   .glowingBorder {
     background:
-      linear-gradient(#222, #222) padding-box,
-      linear-gradient(var(--angle), #4cea7f, #222, #222) border-box;
+      linear-gradient(#2a2a2a, #2a2a2a) padding-box,
+      linear-gradient(var(--angle), #4cea7f, #2a2a2a, #2a2a2a) border-box;
     animation: 8s rotate linear infinite;
   }
 
@@ -50,7 +57,7 @@ import "../styles/global.css";
   class:list={[
     "card",
     "w-full",
-    "max-w-md",
+    "max-w-xl",
     glowingBorder ? "glowingBorder" : "",
   ]}
 >

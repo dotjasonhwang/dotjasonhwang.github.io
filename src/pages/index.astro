@@ -12,6 +12,18 @@ import "../styles/global.css";
     animation-fill-mode: forwards;
   }
 
+  .shield {
+    height: 2rem;
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+  }
+
+  @media (min-width: 1024px) {
+    /* equivalent to lg */
+    .shield {
+      height: 3rem;
+    }
+  }
+
   @keyframes fadeInAnimation {
     0% {
       opacity: 0;
@@ -27,25 +39,27 @@ import "../styles/global.css";
   <head>
     <Header />
   </head>
-  <body class="flex flex-col justify-center items-center h-dvh p-6 md:p-10">
+  <body class="flex flex-col justify-center items-center h-dvh p-8 lg:p-10">
     <Card glowingBorder="true">
-      <h1 class="text-xl md:text-3xl font-normal mb-4">JASON HWANG</h1>
-      <h2 class="text-md md:text-lg font-normal text-gray-400 mb-4">
+      <h1 class="text-3xl lg:text-6xl font-normal mb-4 lg:mb-8">JASON HWANG</h1>
+      <h2 class="text-xl lg:text-4xl font-normal text-gray-400 mb-20 lg:mb-32">
         software and more
       </h2>
-      <ul class="list-none mt-4">
-        <li class="mb-2">
+      <ul class="list-none flex flex-col items-center">
+        <li class="mb-8 lg:mb-12">
           <a href="https://github.com/dotjasonhwang">
             <img
-              src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github"
+              src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&color=#6cc644"
+              class="shield"
               alt="GitHub"
             />
           </a>
         </li>
-        <li class="mb-2">
+        <li class="mb-8 lg:mb-12">
           <a href="https://linkedin.com/in/dotjasonhwang">
             <img
               src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+              class="shield"
               alt="LinkedIn"
             />
           </a>
@@ -54,6 +68,7 @@ import "../styles/global.css";
           <a href="https://instagram.com/dotjasonhwang">
             <img
               src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+              class="shield"
               alt="Instagram"
             />
           </a>
