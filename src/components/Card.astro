@@ -11,7 +11,7 @@ import "../styles/global.css";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 2.5rem;
     border: 2px solid transparent;
     border-radius: 1rem;
   }
@@ -26,7 +26,7 @@ import "../styles/global.css";
   .glowingBorder {
     background:
       linear-gradient(#2a2a2a, #2a2a2a) padding-box,
-      linear-gradient(var(--angle), #4cea7f, #2a2a2a, #2a2a2a) border-box;
+      linear-gradient(var(--angle), #ffffff, #2a2a2a, #2a2a2a) border-box;
     animation: 8s rotate linear infinite;
   }
 
@@ -53,13 +53,6 @@ import "../styles/global.css";
   }
 </style>
 
-<div
-  class:list={[
-    "card",
-    "w-full",
-    "max-w-xl",
-    glowingBorder ? "glowingBorder" : "",
-  ]}
->
+<div class:list={["card", glowingBorder ? "glowingBorder" : ""]}>
   <slot />
 </div>

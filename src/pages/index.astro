@@ -13,14 +13,15 @@ import "../styles/global.css";
   }
 
   .shield {
-    height: 2rem;
-    box-shadow: 0 0 3px rgb(0, 0, 0);
+    height: 2.4rem;
+    box-shadow: 0 0 6px rgb(0, 0, 0);
   }
 
   @media (min-width: 1024px) {
     /* equivalent to lg */
     .shield {
-      height: 3rem;
+      height: 3.6rem;
+      box-shadow: 0 0 9px rgb(0, 0, 0);
     }
   }
 
@@ -39,11 +40,13 @@ import "../styles/global.css";
   <head>
     <Header />
   </head>
-  <body class="flex flex-col justify-center items-center h-dvh p-8 lg:p-10">
+  <body
+    class="flex flex-col justify-center items-center min-h-screen px-8 pt-4 lg:pt-10"
+  >
     <Card glowingBorder="true">
-      <h1 class="text-3xl lg:text-6xl font-normal mb-4 lg:mb-8">JASON HWANG</h1>
-      <h2 class="text-xl lg:text-4xl font-normal text-gray-400 mb-20 lg:mb-32">
-        software and more
+      <h1 class="text-3xl lg:text-5xl font-normal mb-2 lg:mb-3">JASON HWANG</h1>
+      <h2 class="text-xl lg:text-3xl font-normal text-gray-400 mb-16 lg:mb-24">
+        software engineer
       </h2>
       <ul class="list-none flex flex-col items-center">
         <li class="mb-8 lg:mb-12">
